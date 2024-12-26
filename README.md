@@ -19,7 +19,6 @@
 ## Modules
 
 - [Module 48: Database Essentials & Relational Model](./module-48/README.md)
--
 
 ## Contact
 
