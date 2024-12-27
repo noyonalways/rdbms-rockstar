@@ -19,6 +19,7 @@
 ## Modules
 
 - [Module 48: Database Essentials & Relational Model](./module-48/README.md)
+- [Module 49: Database Normalization, Postgres Installation, and Application Insights](./module-49/README.md)
 
 ## Contact
 
