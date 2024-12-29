@@ -16,6 +16,25 @@
 
 ## Table of Contents:
 
+- [1. Solving The First Case Study](#1-solving-the-first-case-study)
+- [2. Exploring PSQL and its Default Behavior, Creating Database](#2-exploring-psql-and-its-default-behavior-creating-database)
+- [3. User, Role and Privilege Management in POSTGRES.](#3-user-role-and-privilege-management-in-postgres)
+- [4. Granting and Revoking Privileges](#4-granting-and-revoking-privileges)
+- [5. Structured Query Language (SQL)](#5-structured-query-language-sql)
+- [6. Exploring pgAdmin and Valentina Studio.](#6-exploring-pgadmin-and-valentina-studio)
+- [7. Create, Update and Delete Database and Data Types in POSTGRES](#7-create-update-and-delete-database-and-data-types-in-postgres)
+  - [Why need data types:](#why-need-data-types)
+  - [Data Types:](#data-types)
+  - [Boolean:](#boolean)
+  - [Integer:](#integer)
+  - [Characters](#characters)
+  - [Date:](#date)
+  - [UUID:](#uuid)
+- [8. Creating a Table with Multiple Columns and Different Data Types](#8-creating-a-table-with-multiple-columns-and-different-data-types)
+- [9. Creating a Table with Multiple Columns and Column Constraints](#9-creating-a-table-with-multiple-columns-and-column-constraints)
+- [10. Different Methods to Define Constraints.](#10-different-methods-to-define-constraints)
+- [11. Inserting Data into a Table and Checking Constraints](#11-inserting-data-into-a-table-and-checking-constraints)
+
 # 1. Solving The First Case Study
 
 # 2. Exploring PSQL and its Default Behavior, Creating Database
@@ -102,7 +121,7 @@
   - Typically used for longer text strings where the exact length is not known or can very widely.
   - Example: TEXT is often used for columns containing large amounts of text.
 
-### Data:
+### Date:
 
 - TIME HH:MM:SS
 - HH:MM:SS
@@ -116,8 +135,41 @@
 
 # 8. Creating a Table with Multiple Columns and Different Data Types
 
+```sql
+-- creating a table
+create TABLE person (
+  person_id VARCHAR(50),
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  age INTEGER,
+  is_active BOOLEAN,
+  dob DATE
+)
+
+-- change the table name
+alter TABLE person RENAME to "user";
+
+-- drop a table
+DROP TABLE "user"
+
+```
+
 # 9. Creating a Table with Multiple Columns and Column Constraints
 
 # 10. Different Methods to Define Constraints.
 
+```sql
+-- create table with constraints
+create TABLE person (
+  id serial PRIMARY KEY,
+  user_name VARCHAR(50) not NULL,
+  age INTEGER check (age >= 18)
+);
+```
+
 # 11. Inserting Data into a Table and Checking Constraints
+
+```sql
+-- insert single and multiple values on column
+INSERT INTO person (id, user_name, age) VALUES(1, 'Noyon', 21), (2, 'Nadim', 21)
+```
