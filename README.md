@@ -21,6 +21,7 @@
 - [Module 48: Database Essentials & Relational Model](./module-48/README.md)
 - [Module 49: Database Normalization, Postgres Installation, and Application Insights](./module-49/README.md)
 - [Module 50: PostgreSQL Essentials](./module-50/README.md)
+- [Module 51: PostgreSQl Fundamentals and Advanced Data Manipulation Techniques](./module-51/README.md)
 
 ## Contact
 
